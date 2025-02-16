@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <div className="home">
-      <h1> Netflix Movie Search</h1>
+      <h1 align="center"> Netflix Movie Search</h1>
       <SearchBar setMovies={setMovies} setLoading={setLoading}/>
       {loading ?<Loader />: <MovieList movies={movies} /> }
 
