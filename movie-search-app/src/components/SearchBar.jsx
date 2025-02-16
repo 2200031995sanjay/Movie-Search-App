@@ -1,8 +1,8 @@
 import {useState} from "react";
 
-import { axios } from 'axios';
+import axios  from 'axios';
 
-import { FiSearch } from 'rea';
+import { FiSearch } from 'react-icons/fi';
 
 
 // eslint-disable-next-line react/prop-types
@@ -12,8 +12,8 @@ function SearchBar({setMovies, setLoading}){
    const fetchMovies = async()=>{
     if(!query.trim()) return;
     setLoading(true);
-    const API_KEY = import.meta.env.VITE_OMBD_API_KEY;
-    const URL = `https://www.omdbapi.com/?s=${query}&apikey=${API_KEY}`;
+    // const API_KEY = import.meta.env.VITE_OMBD_API_KEY;
+    const URL = `https://www.omdbapi.com/?s=${query}&apikey=db669440`;
 
     try{
         const response = await axios.get(URL);
